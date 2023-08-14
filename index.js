@@ -6,6 +6,7 @@ const fileUpload = require("express-fileupload");
 require('dotenv').config()
 const userRoutes = require('./routes/User')
 const courseRoutes = require('./routes/Course')
+const contactRoutes = require('./routes/Contact')
 // connecting database
 require('./config/databse').dbConnect()
 
@@ -28,6 +29,7 @@ app.use(
 
 app.use('/api/v1/auth/',userRoutes)
 app.use('/api/v1/course/',courseRoutes)
+app.use('/api/v1/contact' , contactRoutes)
 
 
 app.use('/' , (req,res) => {
