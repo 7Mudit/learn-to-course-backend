@@ -23,7 +23,6 @@ app.use(
 app.use(
 	cors({
 		origin:true,
-		credentials:true,
 	})
 )
 
